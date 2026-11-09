@@ -18,6 +18,7 @@ const app=express()
 app.use(cors({
     origin: [
         "http://localhost:5173",
+        "https://flavour-frontend.vercel.app",
         "https://flavour-frontend-pul1ejrbo-sahil-dwivedis-projects-98098e31.vercel.app"
     ],
     credentials: true
