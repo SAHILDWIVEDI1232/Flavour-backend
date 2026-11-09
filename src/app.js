@@ -9,10 +9,19 @@ const commentRoutes = require("./routes/comment.routes");
 const cors=require('cors')
 
 const app=express()
+// app.use(cors({
+//     origin:"http://localhost:5173",
+
+//     credentials:true
+// }))
+
 app.use(cors({
-    origin:"http://localhost:5173",
-    credentials:true
-}))
+    origin: [
+        "http://localhost:5173",
+        "https://flavour-frontend.vercel.app"
+    ],
+    credentials: true
+}));
 app.use(cookieParser())
 app.use(express.json())
 
